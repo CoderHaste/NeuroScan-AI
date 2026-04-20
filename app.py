@@ -10,6 +10,14 @@ import cv2
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 import io
+import os
+import gdown
+
+MODEL_PATH = "brain_tumor_model.pth"
+
+if not os.path.exists(MODEL_PATH):
+    url = "https://drive.google.com/uc?id=19mGV7eKw8oMSQxwtypWQtbyfHv_iNJFQ"
+    gdown.download(url, MODEL_PATH, quiet=False)
 
 # PAGE CONFIGURATION
 st.set_page_config(
@@ -103,7 +111,7 @@ def load_model():
         nn.Linear(128, 4)
     )
 
-    model.load_state_dict(torch.load("brain_tumor_model.pth", map_location="cpu"))
+    model.load_state_dict(torch.load(MODEL_PATH, map_location="cpu"))
     model.eval()
 
     return model
