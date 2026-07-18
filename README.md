@@ -56,7 +56,7 @@ If needed, you can manually download it from:
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/NeuroScan-AI.git
+git clone https://github.com/Coderhaste/NeuroScan-AI.git
 cd NeuroScan-AI
 ```
 
