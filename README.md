@@ -74,12 +74,6 @@ streamlit run app.py
 
 ---
 
-## 📸 Demo
-
-*(Add screenshots of your UI here for better presentation)*
-
----
-
 ## 🔍 How It Works
 
 1. Upload an MRI scan image
